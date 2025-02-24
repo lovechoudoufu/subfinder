@@ -21,7 +21,6 @@ var (
 		"certspotter",
 		"chaos",
 		"chinaz",
-		"columbus",
 		"commoncrawl",
 		"crtsh",
 		"digitorus",
@@ -34,7 +33,6 @@ var (
 		"hackertarget",
 		"intelx",
 		"netlas",
-		"passivetotal",
 		"quake",
 		"rapiddns",
 		"redhuntlabs",
@@ -54,7 +52,7 @@ var (
 		// "threatminer",
 		// "reconcloud",
 		"builtwith",
-		"subdomaincenter",
+		"hudsonrock",
 	}
 
 	expectedDefaultSources = []string{
@@ -67,7 +65,6 @@ var (
 		"censys",
 		"chaos",
 		"chinaz",
-		"columbus",
 		"crtsh",
 		"digitorus",
 		"dnsdumpster",
@@ -76,7 +73,6 @@ var (
 		"fullhunt",
 		"hackertarget",
 		"intelx",
-		"passivetotal",
 		"quake",
 		"redhuntlabs",
 		"robtex",
@@ -91,7 +87,6 @@ var (
 		// "threatminer",
 		// "reconcloud",
 		"builtwith",
-		"subdomaincenter",
 	}
 
 	expectedDefaultRecursiveSources = []string{
@@ -100,11 +95,9 @@ var (
 		"bufferover",
 		"certspotter",
 		"crtsh",
-		"dnsdumpster",
 		"dnsdb",
 		"digitorus",
 		"hackertarget",
-		"passivetotal",
 		"securitytrails",
 		"virustotal",
 		"leakix",

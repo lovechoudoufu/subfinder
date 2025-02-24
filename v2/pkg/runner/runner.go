@@ -119,6 +119,7 @@ func (r *Runner) EnumerateMultipleDomainsWithCtx(ctx context.Context, reader io.
 	ip, _ := regexp.Compile(`^([0-9\.]+$)`)
 	for scanner.Scan() {
 		domain := preprocessDomain(scanner.Text())
+		domain = replacer.Replace(domain)
 
 		if domain == "" || (r.options.ExcludeIps && ip.MatchString(domain)) {
 			continue
@@ -136,7 +137,7 @@ func (r *Runner) EnumerateMultipleDomainsWithCtx(ctx context.Context, reader io.
 				return err
 			}
 
-			err = r.EnumerateSingleDomainWithCtx(ctx, domain, append(writers, file))
+			_, err = r.EnumerateSingleDomainWithCtx(ctx, domain, append(writers, file))
 
 			file.Close()
 		} else if r.options.OutputDirectory != "" {
@@ -154,11 +155,11 @@ func (r *Runner) EnumerateMultipleDomainsWithCtx(ctx context.Context, reader io.
 				return err
 			}
 
-			err = r.EnumerateSingleDomainWithCtx(ctx, domain, append(writers, file))
+			_, err = r.EnumerateSingleDomainWithCtx(ctx, domain, append(writers, file))
 
 			file.Close()
 		} else {
-			err = r.EnumerateSingleDomainWithCtx(ctx, domain, writers)
+			_, err = r.EnumerateSingleDomainWithCtx(ctx, domain, writers)
 		}
 		if err != nil {
 			return err
