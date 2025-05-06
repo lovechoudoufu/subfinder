@@ -42,6 +42,7 @@ var (
 		"shodan",
 		"sitedossier",
 		"threatbook",
+		"threatcrowd",
 		"virustotal",
 		"waybackarchive",
 		"whoisxmlapi",
@@ -53,6 +54,7 @@ var (
 		// "reconcloud",
 		"builtwith",
 		"hudsonrock",
+		"digitalyama",
 	}
 
 	expectedDefaultSources = []string{
@@ -87,6 +89,7 @@ var (
 		// "threatminer",
 		// "reconcloud",
 		"builtwith",
+		"digitalyama",
 	}
 
 	expectedDefaultRecursiveSources = []string{
